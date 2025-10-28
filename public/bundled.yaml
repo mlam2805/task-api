@@ -55,11 +55,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/Task'
         '400':
-          description: Invalid input
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ValidationError'
+          $ref: '#/components/responses/BadRequest'
 components:
   schemas:
     Task:
@@ -85,5 +81,10 @@ components:
           type: array
           items:
             type: string
-          example:
-            - Title is required
+  responses:
+    BadRequest:
+      description: Invalid input
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ValidationError'
