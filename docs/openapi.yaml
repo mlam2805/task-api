@@ -16,15 +16,18 @@ paths:
               schema: 
                 type: array
                 items: 
-                  type: object
-                  properties:
-                    id: 
-                      type: integer
-                      example: 1
-                    title:
-                      type: string
-                      example: Buy groceries
-                    completed:
-                      type: boolean
-                      example: false
-        
+                  $ref: '#/components/schemas/Task'
+components:
+  schemas:
+    Task:
+      type: object
+      properties:
+        id: 
+          type: integer
+          example: 1
+        title:
+          type: string
+          example: Buy groceries
+        completed:
+          type: boolean
+          example: false        
