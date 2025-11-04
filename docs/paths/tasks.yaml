@@ -44,5 +44,4 @@ post:
           schema:
             $ref: ../components/schemas/Task.yaml
     '400':
-      $ref: ../components/responses/BadRequest.yaml
-
+        $ref: ../components/responses/BadRequest.yaml
